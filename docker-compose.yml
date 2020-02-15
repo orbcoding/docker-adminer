@@ -13,6 +13,9 @@ services:
       LETSENCRYPT_HOST: ${NGINX_HOST}
       LETSENCRYPT_EMAIL: ${NGINX_EMAIL}
       ADMINER_DEFAULT_SERVER: ${ADMINER_DEFAULT_SERVER}
+    logging:
+      options:
+        max-size: "1m"
 
 networks:
   default:
